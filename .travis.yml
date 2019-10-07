@@ -3,7 +3,7 @@ dist: bionic
 addons:
   apt:
     packages:
-      -lib32stdc++6
+      - lib32stdc++6
 install:
   - git clone https://github.com/flutter/flutter.git -b stable --depth
   - export PATH=.flutter/bin:$sPATH
