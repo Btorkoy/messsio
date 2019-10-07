@@ -1,0 +1,18 @@
+language: dart
+dist: bionic
+addons:
+  apt:
+    packages:
+      -lib32stdc++6
+install:
+  - git clone https://github.com/flutter/flutter.git -b stable --depth
+  - export PATH=.flutter/bin:$sPATH
+  - flutter doctor
+  - flutter --version
+script:
+  - flutter packages get
+  - flutter analyze --no-pub --no-current-package lib/ test/
+  - flutter test --no-pub test/
+cashe:
+  directories:
+    - $HOME/.pub-cashe
